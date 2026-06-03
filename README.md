@@ -35,7 +35,7 @@ https://docs.acados.org/installation/index.html
 
 ### Level 1 — `level1_llm_baseline.py` — LLM Only (No Safety Filter)
 
-Claude receives the CartPole state as natural language and returns a control
+LLama receives the CartPole state as natural language and returns a control
 action. There is no mathematical safety guarantee. Errors compound, and the
 pole falls reliably during and after the wind window.
 
