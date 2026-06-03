@@ -123,11 +123,6 @@ normal conditions here since W_MAX = 0.35 > WIND_MAGNITUDE = 0.30.
 conda activate asm
 ```
 
-Create a `.env` file in the project root:
-```
-ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxx
-```
-
 Run each level:
 ```bash
 # Level 1 LLM baseline, CartPole
