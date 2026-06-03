@@ -39,7 +39,7 @@ LLama receives the CartPole state as natural language and returns a control
 action. There is no mathematical safety guarantee. Errors compound, and the
 pole falls reliably during and after the wind window.
 
-**Crashes when:** Wind hits at step 50. The LLM reacts too slowly, has no
+**Crashes when:** Wind hits at step 40. The LLM reacts too slowly, has no
 predictive model of dynamics, and occasionally fails to parse a clean float.
 Constraint violations are frequent.
 
@@ -54,7 +54,7 @@ before it reaches the environment. MPC solves a short-horizon quadratic
 program to find the action closest to the LLM's intent that stays within
 constraint bounds over the next 10 steps.
 
-**Crashes when:** Wind hits at step 50. Classical MPC has no disturbance model.
+**Crashes when:** Wind hits at step 40. Classical MPC has no disturbance model.
 Its predicted trajectory is immediately wrong once wind perturbs the cart. It
 cannot tighten constraints proactively and only reacts after the state has
 already been pushed toward the boundary.
